@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head> <link rel="icon" href="images/logoV2.PNG">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Selector</title>
+  <meta name="description" content = "For all your hosting needs."> 
+  <link rel="stylesheet" href="styling.css"/>
+</head>
+
+<body 
+style="background-image: url(images/backmed.jpg); 
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+
+<!-- Heading Section --> 
+<section style="margin-bottom: -50px; margin-left: 10px;">
+
+<img src="images/urology.png" width="200px" height="200px" 
+style="margin-top: 10px;">
+
+</section>
+
+<!-- Script Sections --> 
+<section>
+
+  <script>
+    //function that display value
+    function dis(val)
+    {
+        document.getElementById("result").value+=val+", "
+    }
+
+    function clr()
+         {
+            document.getElementById("result").value = "" 
+            bchecked = 0;
+
+            for (var i=0; i<100; i++) 
+              {document.getElementsByName("symp")[i].checked = false;}
+      
+            }
+            
+    
+  </script>
+
+
+<script>
+
+function checking() {
+
+  var bchecked = 0
+  
+  let illness = [
+    { num: 0, name:"Covid", value:0, nsymptoms: 2 },
+    { num: 1, name:"Flu", value:0, nsymptoms: 3  },
+    { num: 2, name:"Dengue", value:0, nsymptoms: 2 },
+    { num: 3, name:"Zika", value:0, nsymptoms: 3  },
+  ]
+
+  // Based on symptom checkbox, take these actions.
+    if (bchecked < 1){
+      if (document.getElementById("Headache").checked) 
+      {illness[0].value = illness[0].value + 1;
+      illness[1].value = illness[1].value + 1;
+      illness[3].value = illness[3].value + 1;
+      bchecked = bchecked + 1;}
+
+      if (document.getElementById("Cough").checked) 
+      {illness[0].value = illness[0].value + 1;
+      illness[1].value = illness[1].value + 1;
+      bchecked = bchecked + 1;}
+
+      if (document.getElementById("SmellLoss").checked) 
+      {illness[0].value = illness[0].value + 1;
+      bchecked = bchecked + 1;}
+
+      if (document.getElementById("RunnyNose").checked) 
+      {illness[1].value = illness[1].value + 1;
+      bchecked = bchecked + 1;}
+
+      if (document.getElementById("Nausea").checked) 
+      {illness[2].value = illness[2].value + 1;
+      bchecked = bchecked + 1;}
+      
+      if (document.getElementById("Vomiting").checked) 
+      {illness[2].value = illness[2].value + 1;
+      bchecked = bchecked + 1;}
+
+      if (document.getElementById("Fever").checked) 
+      {illness[3].value = illness[3].value + 1;
+      bchecked = bchecked + 1;}
+      
+      if (document.getElementById("Rash").checked) 
+      {illness[3].value = illness[3].value + 1;
+      bchecked = bchecked + 1;}
+
+    }
+
+    if (bchecked >= 1)
+    {
+      var currentval = 0;
+      var currentill = "none"
+    for (let i = 0; i < illness.length; i++) {
+      if (illness[i].value > currentval)
+      {
+        currentval = illness[i].value
+        currentill= illness[i].name
+      }
+    }
+
+    {alert ("Most Likely Illness: " + currentill + ".");}}
+
+    else 
+    {alert("Nothing is checked!.");}
+    }
+
+// Need to make an object oriented array list (array of objects) and add the values to the value section of each object. The Array will have the diseas and how likely the value is, then compare it to the bchecked variable since that shows all checked boxes.
+
+</script>
+
+</section>
+
+<!-- Front-End Section --> 
+<section class="checkbody">
+<section class="content">
+
+  <span>
+    <textarea class="input" style="width: 270px; height: 150px; margin-top: 10px;" id="result" placeholder="Selected Symptoms Will Be Shown Here"></textarea>
+  </span>
+
+  <hr>
+
+  <!--Symptom List-->
+  <input name = "symp" id = "Headache" type="checkbox" value="Headache" onclick="dis('Headache')"/>
+  <label>Headache</label>
+
+  <hr>
+  <input name = "symp" id = "Cough" type="checkbox" value="Cough" onclick="dis('Cough')"/>
+  <label>Cough</label>
+
+  <hr>
+  <input name = "symp" id = "SmellLoss" type="checkbox" value="SmellLoss" onclick="dis('Smell Loss')"/>
+  <label>Smell Loss</label>
+
+  <hr>
+  <input name = "symp" id = "RunnyNose" type="checkbox" value="RunnyNose" onclick="dis('Runny Nose')"/>
+  <label>Runny Nose</label>
+
+  <hr>
+  <input name = "symp" id = "Nausea" type="checkbox" value="Nausea" onclick="dis('Nausea')"/>
+  <label>Nausea</label>
+
+  <hr>
+  <input name = "symp" id = "Vomiting" type="checkbox" value="Vomiting" onclick="dis('Vomiting')"/>
+  <label>Vomiting</label>
+
+  <hr>
+  <input name = "symp" id = "Fever" type="checkbox" value="Fever" onclick="dis('Fever')"/>
+  <label>Fever</label>
+
+  <hr>
+  <input name = "symp" id = "Rash" type="checkbox" value="Rash" onclick="dis('Rash')"/>
+  <label>Rash</label>
+
+<p>
+  <input class = "clearing" type="button" value="c" onclick="clr()"/>
+  <hr>
+  <input class = "clearing" type="button" value="Submit" onclick="checking()"/>
+</p>
+
+</section>
+
+</section>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
