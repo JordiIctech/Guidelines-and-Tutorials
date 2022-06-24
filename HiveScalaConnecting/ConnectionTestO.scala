@@ -19,6 +19,6 @@ object ConnectionTestO{ // Object file name.
     df2.createOrReplaceTempView("beverage")                       //Type didn't seem to matter, just loaded straight .txt that looked like tables.
     spark.sql("SELECT * FROM beverage;").show()                     // Show() displays current tables.
     spark.sql("SELECT _c0 from beverage WHERE _c1='Branch6'").show() //Shows all tables that have Branch 6
-
+   /*Make sure to connect IntelliJ to scala and jdk8. Then build the project's build.sbt, then the main file and then run.*/
   }
 }
