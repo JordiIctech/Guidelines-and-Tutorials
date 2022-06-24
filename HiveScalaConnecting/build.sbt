@@ -4,7 +4,7 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "test1"
+    name := "modulename" // Part of the project that include the relavent subfulders for function. Lowest level folder that coontains all essentials.
   )
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.2.1"
