@@ -1,4 +1,4 @@
-object D2 {
+object UsefulFunctions {
   println("----------Start of Document----------") /* Prints First, main would print last.*/
   import scala.collection.mutable.ArrayBuffer
     def main(args:Array[String]):Unit={
