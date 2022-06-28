@@ -1,0 +1,9 @@
+Programs Used:Hive, Spark, IntelliJ, SQL
+
+Most Important: Spark, SQL
+
+
+
+Important Links:
+https://docs.aws.amazon.com/athena/latest/ug/extracting-data-from-JSON.html
+https://spark.apache.org/docs/2.2.0/sql-programming-guide.html
