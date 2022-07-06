@@ -1,1 +1,6 @@
-Have: 
+Have: IntelliJ, Spark, HDFS, Hadoop, Hive 
+
+IMPORTANT: Right click file --> Modify Run Configuration --> Working Directory --> Change to the input folder on C Drive.
+
+Additional Info:
+https://github.com/WilliamTRev/BigDataPythonScalaSpark/blob/main/Week3/Day5/HadoopWinutils.txt
