@@ -12,16 +12,16 @@ wsl --shutdown # From powershell
 
 sudo nano .bashrc
 htop
-cat > movemepls
-jps
-wsl --shutdown
+cat > movemepls        # Creates a text file and lets you write on it instantly.
+jps              # Checks running nodes
+wsl --shutdown   # Turns off virtual machine, from powershell.
 rm moveme # Deletes
 HADOOP:
-bin/hdfs dfs -touchz  /jordi/testing2.txt 
-hadoop fs -mkdir -p /jordi/testing2
+bin/hdfs dfs -touchz  /jordi/testing2.txt   # Edits hadoop files
+hadoop fs -mkdir -p /jordi/testing2         # Makes hadoop files 
 ----------------------------------------
 hadoop fs -put moveme /jordi/
-hdfs dfs -ls /jordi/                      # Move
+hdfs dfs -ls /jordi/                      # Check what is in hadoop file jordi
 hadoop fs -put MortalityDatabase /user/hive/warehouse/ # Move from linux memory to hive warehouse.
 ----------------------------------------
 hdfs dfs -rmdir /jordi
