@@ -21,12 +21,14 @@ bin/hdfs dfs -touchz  /jordi/testing2.txt
 hadoop fs -mkdir -p /jordi/testing2
 ----------------------------------------
 hadoop fs -put moveme /jordi/
-hdfs dfs -ls /jordi/
-hadoop fs -put MortalityDatabase /user/hive/warehouse/
+hdfs dfs -ls /jordi/                      # Move
+hadoop fs -put MortalityDatabase /user/hive/warehouse/ # Move from linux memory to hive warehouse.
 ----------------------------------------
 hdfs dfs -rmdir /jordi
 ---------------------------------------------------------------------------------------------------------
 ==========================================================================================================
 Important Commands P2 Using Beeline:
-hdfs dfs -ls /user/hive/warehouse/dem
-beeline -u jdbc:hive2://
+hdfs dfs -ls /user/hive/warehouse/dem         # Check to see if the demonstration worked.
+beeline -u jdbc:hive2://                      # Enter hive as specific user.
+
+./spark-shell   # Do this once you are in hadoop/spark/bin.
