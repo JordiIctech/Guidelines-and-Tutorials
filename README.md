@@ -12,3 +12,13 @@ Everything I need to remember will be summarized and explained here.
 # text in gray
 @@ text in purple (and bold)@@
 ```
+---
+&nbsp;
+# MVP
+> ## Loggin Using Spark - Status [Incomplete]
+> ## Visualize Results With Zeppelin - Status [Incomplete]
+
+---
+&nbsp;
+# Stretch Goals
+> ## Use Airflow - Status [Incomplete]
