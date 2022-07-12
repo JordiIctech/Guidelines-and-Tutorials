@@ -32,3 +32,9 @@ hdfs dfs -ls /user/hive/warehouse/dem         # Check to see if the demonstratio
 beeline -u jdbc:hive2://                      # Enter hive as specific user.
 
 ./spark-shell   # Do this once you are in hadoop/spark/bin.
+
+~/hadoop/spark-3.3.0/bin/spark-submit --class scalademo.HelloWorld scala-demo_2.11-0.1.jar #Used to run a jar file, after the "--class" you change it.
+
+
+
+
