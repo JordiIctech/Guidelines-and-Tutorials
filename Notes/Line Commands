@@ -24,7 +24,8 @@ hadoop fs -put moveme /jordi/
 hdfs dfs -ls /jordi/                      # Check what is in hadoop file jordi
 hadoop fs -put MortalityDatabase /user/hive/warehouse/ # Move from linux memory to hive warehouse.
 ----------------------------------------
-hdfs dfs -rmdir /jordi
+hdfs dfs -mkdir /user/hive/warehouse/Project2      # Makes directory
+hdfs dfs -rmdir /jordi                              # Deletes directory 
 ---------------------------------------------------------------------------------------------------------
 ==========================================================================================================
 Important Commands P2 Using Beeline:
