@@ -5,7 +5,7 @@ beeline -u jdbc:hive2:// # Start a beeline.
 sudo nano .bashrc # Open .bashrc from home to edit then just exit with ctrl+x.
 sudo ssh restart
 sudo service ssh restart
-sbin/start-dfs.sh # Start to start (Need to be in $HADOOP_HOME
+sbin/start-dfs.sh # Start to start (Need to be in $HADOOP_HOME)
 sbin/stop-yarn.sh # Stop to stop
 jps # Check if it works
 wsl --shutdown # From powershell
