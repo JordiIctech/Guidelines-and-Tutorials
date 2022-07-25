@@ -38,6 +38,7 @@ beeline -u jdbc:hive2://                      # Enter hive as specific user.
 sbt clean package # Do it once in the project folder where you can see the build.sbt
 cd target --> cd scala-2.xx # Then run following command on the jar file made.
 
+# Said on 07/12/2022
 ~/hadoop/spark-3.3.0/bin/spark-submit --class scalademo.HelloWorld scala-demo_2.11-0.1.jar # Used to run a jar file, after the "--class" you change it. The 
 scalademo section after class is the package. If not package just type the file.
 
