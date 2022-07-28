@@ -1,0 +1,14 @@
+Zipped the function made in VS code alone and uploaded it. (function takes event and context)
+Event is used to pass in the JSON or any uploaded data while context is used for runtime and function info.
+
+Got Numpy from dowload at https://pypi.org/ with python 3.9 and 86_64 linux as version.
+Unzipped it into a folder named python. 
+Zipped the python folder.
+ 
+Uploaded VSC zip as function. (Nothing outside the def function runs.)
+Uploaded python zip as layer.
+
+Added layer to function.
+Changed key1 value in the test JSON file to Ji. (Any password you want.)
+
+Ran using JSON file with: {"key1": "jI"}
