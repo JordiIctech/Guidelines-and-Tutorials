@@ -1,2 +1,13 @@
-Used 7 zip file manager
-python name
+Zip the function made in VS code alone and uploaded it. (function takes event and context)
+Event is used to pass in the JSON or any uploaded data while context is used for runtime and function info.
+
+Get Module from download at https://pypi.org/ with python version and linux as version.
+Unzip it into a folder named python. # Used 7 zip file manager
+Zip the python folder.
+ 
+Upload VSC zip as function. (Nothing outside the def function runs.)
+Upload python zip as layer.
+
+Added layer to function from AWS.
+Changed key values in test JSON file to things to read. (Any password you want.)
+Ex: event['key1']for JSON file with: {"key1": "Value1", "key2":"value2"} gives you "Value1".
