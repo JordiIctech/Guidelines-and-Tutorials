@@ -12,3 +12,5 @@ Added layer to function.
 Changed key1 value in the test JSON file to Ji. (Any password you want.)
 
 Ran using JSON file with: {"key1": "jI"}
+
+Log is also automatically created for all runs.
