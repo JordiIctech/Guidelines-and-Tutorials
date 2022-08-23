@@ -27,6 +27,28 @@ WHERE t2.to_date = '9999-01-01' AND t3.to_date = '9999-01-01' AND t4.to_date = '
 ORDER BY t3.salary DESC, t1.first_name DESC;
 
 
-#d005 = development
+#d005 = development, d002 = Finance-------------------------------------------------------------------------------------
 
+WITH 
+CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
+CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary DESC) AS Ranking FROM Salaries AS t1
+WHERE t1.to_date = '9999-01-01')
+Select * FROM CTE1 
+JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
+WHERE Ranking <= 5;
 
+WITH 
+CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
+CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary ASC) AS Ranking FROM Salaries AS t1
+WHERE t1.to_date = '9999-01-01')
+Select * FROM CTE1 
+JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
+WHERE Ranking <= 5;
+
+WITH 
+CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
+CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary DESC) AS Ranking FROM Salaries AS t1
+WHERE t1.to_date = '9999-01-01')
+Select * FROM CTE1 
+JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
+WHERE Ranking <= 5;
