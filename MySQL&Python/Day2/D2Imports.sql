@@ -29,6 +29,7 @@ ORDER BY t3.salary DESC, t1.first_name DESC;
 
 #d005 = development, d002 = Finance-------------------------------------------------------------------------------------
 
+#Current highest 5
 WITH 
 CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
 CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary DESC) AS Ranking FROM Salaries AS t1
@@ -37,6 +38,7 @@ Select * FROM CTE1
 JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
 WHERE Ranking <= 5;
 
+#Current lowest 5
 WITH 
 CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
 CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary ASC) AS Ranking FROM Salaries AS t1
@@ -45,10 +47,28 @@ Select * FROM CTE1
 JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
 WHERE Ranking <= 5;
 
-WITH 
-CTE1 AS (SELECT t1.emp_no, t1.first_name, t1.last_name FROM employees AS t1),
-CTE2 AS (SELECT t1.emp_no, t1.salary, DENSE_RANK() OVER (ORDER BY t1.Salary DESC) AS Ranking FROM Salaries AS t1
-WHERE t1.to_date = '9999-01-01')
-Select * FROM CTE1 
-JOIN CTE2 ON CTE1.emp_no = CTE2.emp_no
-WHERE Ranking <= 5;
+#Current highest 5 for d005 = development, 
+WITH CTE1 AS 
+(SELECT t1.emp_no, t1.first_name, t1.last_name, t2.title, t5.dept_name, t3.salary,
+RANK() OVER (ORDER BY t3.salary DESC) AS Ranking FROM employees AS t1
+JOIN titles t2 ON t2.emp_no = t1.emp_no
+JOIN salaries t3 ON t3.emp_no = t1.emp_no
+JOIN dept_emp t4 on t1.emp_no = t4.emp_no
+JOIN departments t5 on t4.dept_no = t5.dept_no
+WHERE  t2.to_date = '9999-01-01' AND t3.to_date = '9999-01-01' AND t4.to_date = '9999-01-01' AND t5.dept_name = 'Development') #Could be t4 = d005
+SELECT * FROM CTE1 WHERE Ranking <= 5;
+
+#Current lowest five for d002 = Finance
+WITH CTE1 AS 
+(SELECT t1.emp_no, t1.first_name, t1.last_name, t2.title, t5.dept_name, t3.salary,
+RANK() OVER (ORDER BY t3.salary ASC) AS Ranking FROM employees AS t1
+JOIN titles t2 ON t2.emp_no = t1.emp_no
+JOIN salaries t3 ON t3.emp_no = t1.emp_no
+JOIN dept_emp t4 on t1.emp_no = t4.emp_no
+JOIN departments t5 on t4.dept_no = t5.dept_no
+WHERE  t2.to_date = '9999-01-01' AND t3.to_date = '9999-01-01' AND t4.to_date = '9999-01-01' AND t5.dept_name = 'Finance') #Could be t4 = d002
+SELECT * FROM CTE1 WHERE Ranking <= 5 ORDER BY salary DESC;
+
+
+
+
