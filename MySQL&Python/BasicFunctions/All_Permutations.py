@@ -11,6 +11,6 @@ def permute(a, l, r):
             a[l], a[i] = a[i], a[l] 
   
 string = "ABCD"
-n = len(string) 
-a = list(string) 
-permute(a, 0, n) 
+a = list(string)
+r = len(string) 
+permute(a, 0, r) 
