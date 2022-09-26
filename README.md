@@ -1,12 +1,12 @@
 # Guidelines-and-Tutorials
 Everything I that was learned will be written here.
-
 ---
 &nbsp;
-# MVP
-> ## Loggin Using Spark - Status [Incomplete]
-> ## Visualize Results With Zeppelin - Status [Incomplete]
-
+# Categories
+> ## Python - Status [Incomplete]
+> ## SQL - Status [Incomplete]
+> ## Spark
+> ## Scala
 ---
 &nbsp;
 # Extra Tools
