@@ -3,11 +3,11 @@ Everything I that was learned will be written here.
 ---
 &nbsp;
 # Categories
-> ## Python - Status [Incomplete]
-> ## SQL - Status [Incomplete]
+> ## Python
+> ## SQL 
 > ## Spark
 > ## Scala
----
+
 &nbsp;
 # Extra Tools
 > ## Online Python Compiler [https://www.programiz.com/python-programming/online-compiler/]
