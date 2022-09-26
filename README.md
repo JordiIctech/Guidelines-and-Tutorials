@@ -1,5 +1,5 @@
 # Guidelines-and-Tutorials
-Everything I need to remember will be summarized and explained here.
+Everything I that was learned will be written here.
 
 <span style="color:blue">some *blue* text</span>
 
