@@ -1,5 +1,5 @@
 # Guidelines-and-Tutorials
-Everything I that was learned will be written here.
+Everything that was learned will be written here.
 ---
 &nbsp;
 # Categories
