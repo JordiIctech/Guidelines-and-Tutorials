@@ -1,13 +1,17 @@
-# Guidelines-and-Tutorials
-Everything that was learned will be written here.
----
-&nbsp;
-# Categories
-> ## Python
-> ## SQL 
-> ## Spark
-> ## Scala
+## Guidelines and Tutorials
+- Everything I need to learn will be written here.
 
-&nbsp;
-# Extra Tools
-> ## Online Python Compiler [https://www.programiz.com/python-programming/online-compiler/]
+### Technologies:
+- Python
+- SQL
+- Spark
+- Scala
+- AWS 
+- Javascript
+- CSS
+- HTML
+- Hadoop
+- Hive
+
+## Extra:
+- Tableau
