@@ -15,3 +15,4 @@
 
 ## Extra:
 - Tableau
+- Visual Studio Code
