@@ -377,7 +377,7 @@ class Searcher:
 # User interface
 ###############################################################################
 
-# Python 2 compatability
+# Python 2 compatability, just changes input type
 if sys.version_info[0] == 2:
     input = raw_input
 
