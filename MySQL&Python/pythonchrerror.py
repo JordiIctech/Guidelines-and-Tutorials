@@ -23,7 +23,5 @@ def equalSums(S):
 
     return result
 
-
-
 S = "avengers"  #Answer: g                 #"abec" #Answer: e
 equalSums(S)
