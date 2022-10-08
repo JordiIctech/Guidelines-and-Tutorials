@@ -8,6 +8,7 @@
 - Scala
 - AWS 
 - Javascript
+- React Native
 - CSS
 - HTML
 - Hadoop
