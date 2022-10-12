@@ -1,3 +1,5 @@
-You can edit from web itself.
-
+Link:
 https://public.tableau.com/app/profile/jordi.ictech
+
+Notes:
+Editing graphs can be done directly from the web version.
