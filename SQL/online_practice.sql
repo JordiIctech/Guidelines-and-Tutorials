@@ -2,3 +2,7 @@
 
 --1. Obtain all last names and count their repetations.
 SELECT last_name, count(customer_id) AS Repetitions FROM Customers GROUP BY last_name;
+
+--Specific element count.
+SELECT COUNT(DISTINCT status) AS Repeats FROM Shippings;
+
