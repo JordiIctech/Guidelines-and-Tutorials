@@ -8,3 +8,8 @@ SELECT COUNT(DISTINCT status) AS Repeats FROM Shippings;
 
 --Show only unique rows based on certain elements
 SELECT item, amount FROM Orders GROUP BY item, amount;
+
+--Age ranked from lowest to highest using Dense_Rank()
+SELECT customer_id, age,   
+       DENSE_RANK() OVER (ORDER BY age ASC) AS Ranked  
+FROM Customers;  
