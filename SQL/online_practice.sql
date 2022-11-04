@@ -11,7 +11,10 @@ SELECT item, amount FROM Orders GROUP BY item, amount;
 
 --Age ranked from lowest to highest using Dense_Rank()
 SELECT customer_id, age,   
-       DENSE_RANK() OVER (ORDER BY age ASC) AS Ranked  -- If there is a tie, you can ORDER BY additional parameters to break it.
+       DENSE_RANK() OVER (ORDER BY age ASC) AS Ranked  --ORDER BY chooses what to rank, you can ORDER BY additional parameters to break ties.
 FROM Customers;  
 
 --Age ranked from highest to lowest, compared to their same country using Dense_Rank()
+SELECT customer_id, age, country,  
+       DENSE_RANK() OVER (PARTITION BY country ORDER BY age DESC) AS Ranked  --PARTITION BY divides the categories to rank against.
+FROM Customers ORDER BY ranked ASC, country DESC;  
