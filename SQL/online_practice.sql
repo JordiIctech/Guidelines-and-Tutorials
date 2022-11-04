@@ -13,3 +13,5 @@ SELECT item, amount FROM Orders GROUP BY item, amount;
 SELECT customer_id, age,   
        DENSE_RANK() OVER (ORDER BY age ASC) AS Ranked  
 FROM Customers;  
+
+--Age ranked from highest to lowest, compared to their same country using Dense_Rank()
