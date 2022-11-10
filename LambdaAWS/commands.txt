@@ -1,1 +1,1 @@
-pip3 install numpy -t D:\Revature\LambdaAWS --no-user  # Downloads python module in specific folder
+pip3 install numpy -t D:\Revature\LambdaAWS --no-user  # Downloads python module in specific folder locally
