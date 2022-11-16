@@ -1,4 +1,8 @@
 All cases done through MySQL
 
-## Content
+## Online Editor
 - https://www.programiz.com/sql/online-compiler/
+
+## Dashboards
+- https://databox.com/pricing
+- https://redash.io/
