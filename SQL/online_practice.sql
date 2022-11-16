@@ -18,3 +18,5 @@ FROM Customers;
 SELECT customer_id, age, country,  
        DENSE_RANK() OVER (PARTITION BY country ORDER BY age DESC) AS Ranked  --PARTITION BY divides the categories to rank against.
 FROM Customers ORDER BY ranked ASC, country DESC;  
+
+--Replace all instances of one "like" string to another.
