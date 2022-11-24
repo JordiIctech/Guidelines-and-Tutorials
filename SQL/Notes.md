@@ -6,3 +6,6 @@ All cases done through MySQL
 ## Dashboards
 - https://databox.com/pricing
 - https://redash.io/
+
+## Learning
+- Cloud based storage for large databases
