@@ -9,4 +9,10 @@
 - https://docs.google.com/drawings/ (Created from google drive.)
 
 ## Basic Microsoft Visio Vs Google Drawing Image Comparison
+- Microsoft Visio
+
+
 ![Microsoft Visio](https://github.com/JordiIctech/Guidelines-and-Tutorials/blob/main/Images/microsoft%20visio.png?raw=true)
+
+- Google Drawings
+
