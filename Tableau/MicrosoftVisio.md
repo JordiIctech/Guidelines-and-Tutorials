@@ -16,3 +16,5 @@
 
 - Google Drawings
 
+![Google Drawings](https://github.com/JordiIctech/Guidelines-and-Tutorials/blob/main/Images/US%20Census%20Data%20Map.png?raw=true)
+
