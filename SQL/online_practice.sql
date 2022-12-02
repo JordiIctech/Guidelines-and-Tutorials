@@ -20,3 +20,5 @@ SELECT customer_id, age, country,
 FROM Customers ORDER BY ranked ASC, country DESC;  
 
 --Replace all instances of one "like" string to another.
+
+--Join together multiple tables
