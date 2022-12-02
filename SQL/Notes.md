@@ -8,4 +8,5 @@ All cases done through MySQL
 - https://redash.io/
 
 ## Learning
+- Past link: https://github.com/AjaySingala/Aug2022Primer
 - Cloud based storage for large databases
