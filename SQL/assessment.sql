@@ -78,9 +78,20 @@ GROUP BY t1.EmployeeID,  t2.LastName
 ORDER BY TotalOrders DESC;
 */
 
-
 ------------------------------------------------------------------------------------------------------18
-
+INSERT INTO USACustomers (CustomerID, customername, customercompany, address, stateabbreviation, phone)
+SELECT customerid, contactname, companyname, address,
+(case 
+ when region = 'Oregon' then 'OR' 
+ when region = 'Washington' then 'WA' 
+ when region = 'California' then 'CA'
+ when region = 'Alaska' then 'AK'
+ when region = 'New Mexico' then 'NM'
+ when region = 'Montana' then 'MT'
+ when region = 'Wyoming' then 'WY'
+ when region = 'Idaho' then 'ID'
+ end), Convert(phone AS int)
+FROM Customers WHERE country = 'USA';
 ------------------------------------------------------------------------------------------------------19
 
 ------------------------------------------------------------------------------------------------------20
