@@ -79,6 +79,7 @@ ORDER BY TotalOrders DESC;
 */
 
 ------------------------------------------------------------------------------------------------------18
+/*
 INSERT INTO USACustomers (CustomerID, customername, customercompany, address, stateabbreviation, phone)
 SELECT customerid, contactname, companyname, address,
 (case 
@@ -90,8 +91,22 @@ SELECT customerid, contactname, companyname, address,
  when region = 'Montana' then 'MT'
  when region = 'Wyoming' then 'WY'
  when region = 'Idaho' then 'ID'
- end), Convert(phone AS int)
-FROM Customers WHERE country = 'USA';
+ end), Cast(phone AS int)
+FROM Customers WHERE country = 'USA'; */
 ------------------------------------------------------------------------------------------------------19
+/*
+INSERT INTO CustomerReviews (reviewid, companyname, rating, dateofreview)
+SELECT DISTINCT t1.reviewid, t2.companyname, t1.rating, t1.dateofreview FROM Reviews t1
+JOIN customers t2 ON t1.customerid = t2. customerid;
+*/
 
 ------------------------------------------------------------------------------------------------------20
+SELECT * FROM FreightPerMonth;
+SELECT * FROM Orders;
+
+INSERT INTO FreightPerMonth (Month, TotalFreight)
+SELECT STRFTIME('%m', orderdate), CAST(SUM(freight) AS INT) FROM orders 
+GROUP BY STRFTIME('%m', orderdate);
+
+
+
