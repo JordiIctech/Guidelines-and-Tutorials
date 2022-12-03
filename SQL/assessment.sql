@@ -57,11 +57,11 @@ FROM OrderDetails GROUP BY orderid)
 SELECT * FROM CTE1 WHERE Ranked <= 10;*/
 
 ------------------------------------------------------------------------------------------------------15
-SELECT DISTINCT productid, OrderID, quantity
+/*SELECT DISTINCT productid, OrderID, quantity
 FROM OrderDetails
 WHERE quantity > 60
 GROUP BY OrderID, quantity
-HAVING COUNT(*) > 1;
+HAVING COUNT(*) > 1;*/
 --Add extra notes later.
 /*Accidentally double-entered a line item on an order, with a different ProductID, 
 but the same quantity. She remembers that the quantity was 60 or more. 
@@ -69,6 +69,15 @@ Show all the OrderIDs with order details that match this, in order of OrderID.*/
 ------------------------------------------------------------------------------------------------------16
 
 ------------------------------------------------------------------------------------------------------17
+/*
+SELECT t1.EmployeeID, t2.LastName, t2.firstname, count(OrderID) AS TotalOrders,
+count(case when  ShippedDate >= DATE(RequiredDate, '+5 days') then 1 else null end) AS LateOrders
+FROM Orders t1
+JOIN Employees t2 on t1.EmployeeID = t2.EmployeeID
+GROUP BY t1.EmployeeID,  t2.LastName
+ORDER BY TotalOrders DESC;
+*/
+
 
 ------------------------------------------------------------------------------------------------------18
 
