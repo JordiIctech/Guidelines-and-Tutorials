@@ -15,19 +15,16 @@
 --WHERE shipcountry IN ('Brazil', 'Mexico', 'Argentina', 'Venezuela');
 
 ------------------------------------------------------------------------------------------------------7
---SELECT FirstName, LastName, Title, CONVERT(varchar, birthdate, 101) FROM Employees
+--SELECT FirstName, LastName, Title, STRFTIME('%m/%d/%Y', birthdate) AS BirthDay FROM Employees
 --ORDER BY birthdate asc;
 
 ------------------------------------------------------------------------------------------------------8
 --SELECT FirstName, LastName, (firstname || ' ' || lastname) as FullName from Employees;
 
 ------------------------------------------------------------------------------------------------------9
-SELECT t1.OrderID, t1.OrderDate, t2.companyname FROM Orders t1
-JOIN Shippers t2 on shipvia = shipperid
-WHERE orderid < 10300 ORDER BY orderid ASC;
-
-SELECT * FROM Shippers;
-SELECT * FROM orders;
+--SELECT t1.OrderID, STRFTIME('%d/%m/%Y', t1.orderdate) AS OrderDate, t2.companyname FROM Orders t1
+--JOIN Shippers t2 on shipvia = shipperid
+--WHERE orderid < 10300 ORDER BY orderid ASC;
 
 ------------------------------------------------------------------------------------------------------10
 
