@@ -67,6 +67,12 @@ HAVING COUNT(*) > 1;*/
 but the same quantity. She remembers that the quantity was 60 or more. 
 Show all the OrderIDs with order details that match this, in order of OrderID.*/
 ------------------------------------------------------------------------------------------------------16
+/*SELECT t2.orderid, t1.companyname, STRFTIME('%m/%d/%Y', t2.orderdate) AS OrderDate, GROUP_CONCAT(t4.ProductName) Products
+FROM customers t1
+JOIN Orders t2 ON t1.customerid = t2.customerid
+JOIN OrderDetails t3 on t2.orderid = t3.orderid
+JOIN Products t4 on t3.productid = t4.productid
+GROUP BY t2.orderid;*/
 
 ------------------------------------------------------------------------------------------------------17
 /*
@@ -101,12 +107,8 @@ JOIN customers t2 ON t1.customerid = t2. customerid;
 */
 
 ------------------------------------------------------------------------------------------------------20
-SELECT * FROM FreightPerMonth;
-SELECT * FROM Orders;
-
+/*
 INSERT INTO FreightPerMonth (Month, TotalFreight)
 SELECT STRFTIME('%m', orderdate), CAST(SUM(freight) AS INT) FROM orders 
 GROUP BY STRFTIME('%m', orderdate);
-
-
-
+*/
