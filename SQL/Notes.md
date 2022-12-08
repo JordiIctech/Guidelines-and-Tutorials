@@ -2,7 +2,7 @@ All cases done through MySQL
 
 ## Online Editor
 - https://www.programiz.com/sql/online-compiler/
-- https://sqliteonline.com/
+- https://sqliteonline.com/ (SQLite slightly decreased functionalities)
 
 ## Dashboards
 - https://databox.com/pricing
