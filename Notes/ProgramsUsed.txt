@@ -1,8 +1,5 @@
-Programs Used:Hive, Spark, IntelliJ, SQL
-
-Most Important: Spark, SQL
-
-
+Current Discoveries:
+https://chat.openai.com/chat
 
 Important Links:
 https://docs.aws.amazon.com/athena/latest/ug/extracting-data-from-JSON.html
