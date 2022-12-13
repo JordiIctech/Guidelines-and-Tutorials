@@ -1,5 +1,5 @@
 Current Discoveries:
-https://chat.openai.com/chat
+https://chat.openai.com/chat - ChatGTP, currently works for smaller sections of code.
 
 Important Links:
 https://docs.aws.amazon.com/athena/latest/ug/extracting-data-from-JSON.html
