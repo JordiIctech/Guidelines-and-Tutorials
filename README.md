@@ -1,5 +1,5 @@
 ## Guidelines and Tutorials
-- Everything I need to learn will be written here.
+- Things I have and will learn are written here.
 
 ### Technologies:
 - Python
