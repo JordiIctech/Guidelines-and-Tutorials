@@ -17,3 +17,6 @@
 ## Extra:
 - Tableau
 - Visual Studio Code
+
+## AI Assistance:
+- 
