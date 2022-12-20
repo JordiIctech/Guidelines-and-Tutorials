@@ -19,4 +19,4 @@
 - Visual Studio Code
 
 ## AI Assistance:
-- 
+- Midjourney: AI images through discord (https://www.midjourney.com)
