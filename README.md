@@ -20,4 +20,4 @@
 
 ## AI Assistance:
 - Midjourney: AI images through discord (https://www.midjourney.com)
-- ChatGTP: 
+- ChatGTP: https://chat.openai.com/
