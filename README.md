@@ -21,3 +21,6 @@
 ## AI Assistance:
 - Midjourney: AI images through discord (https://www.midjourney.com)
 - ChatGTP: Conversation and code AI (https://chat.openai.com/)
+
+## To-Do
+- Upload React NAtive Snippets
