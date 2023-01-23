@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------------------------------------------------5
 --SELECT supplierid, contactname, contacttitle FROM Suppliers 
---WHERE country = "Germany" or country = 'Canada' AND NOT contacttitle = 'Marketing Manager';
+--WHERE country = "Germany" OR country = 'Canada' AND NOT contacttitle = 'Marketing Manager';
 
 ------------------------------------------------------------------------------------------------------6
 --SELECT OrderID, CustomerID, ShipCountry FROM Orders 
