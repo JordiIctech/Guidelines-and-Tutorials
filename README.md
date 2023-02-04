@@ -23,4 +23,4 @@
 - ChatGTP: Conversation and code AI (https://chat.openai.com/)
 
 ## To-Do
-- Upload React NAtive Snippets
+- Upload React Native Snippets
