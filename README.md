@@ -24,3 +24,4 @@
 
 ## To-Do
 - Upload React Native Snippets
+- Add SQL scripts
